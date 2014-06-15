@@ -6,6 +6,7 @@
     "contributors": [
         "Thomas Ingham <tingham@mac.com>"
     ],
+    "main": "index.js",
     "dependencies": {
         "express": "^4.4.3",
         "chromath": "0.0.6"
