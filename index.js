@@ -1,3 +1,3 @@
-var palette = require("lib/palette");
+var palette = require("./lib/palette");
 
 module.exports = palette;
