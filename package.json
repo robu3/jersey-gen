@@ -1,6 +1,14 @@
 {
-  "dependencies": {
-    "express": "^4.4.3",
-    "chromath": "0.0.6"
-  }
+    "name": "jersey",
+    "decription": "Generates unique colors and patterns for strings ('jerseys')",
+    "version": "0.0.1",
+    "author": "Robert Mitchell https://github.com/robu3",
+    "contributors": [
+        "Thomas Ingham <tingham@mac.com>"
+    ],
+    "main": "index.js",
+    "dependencies": {
+        "express": "^4.4.3",
+        "chromath": "0.0.6"
+    }
 }
