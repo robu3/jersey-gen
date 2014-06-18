@@ -1,6 +1,9 @@
-var palette = require("./lib/palette");
+var palette = require("./lib/palette"),
+	HexColor = require("./lib/HexColor.js");
+	icon = require("./lib/icon.js");
 
 module.exports = {
-    palette,
-    HexColor: HexColor
+	palette: palette,
+    HexColor: HexColor,
+	icon: icon
 };
