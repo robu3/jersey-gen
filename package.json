@@ -1,11 +1,13 @@
 {
-  "name": "jersey",
+  "name": "jersey-gen",
   "decription": "Generates unique colors and patterns for strings ('jerseys')",
   "version": "0.0.1",
-  "author": "Robert Mitchell https://github.com/robu3",
+  "author": "Robert Mitchell<robert.mitchell.iii+github@gmail.com>",
   "contributors": [
     "Thomas Ingham <tingham@mac.com>"
   ],
+  "repository": "robu3/jersey-gen",
+  "license": "MIT",
   "main": "index.js",
   "dependencies": {
     "chromath": "0.0.6",

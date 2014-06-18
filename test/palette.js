@@ -1,5 +1,18 @@
 var assert = require("assert"),
 	palette = require("../index.js").palette;
+	HexColor = require("../index.js").HexColor;
+
+// find() for arrays - can't wait until this is included in node
+function find(list, delegate) {
+	var found,
+		i;
+
+	for (i = 0; i < list.length; i++) {
+		if (delegate(list[i])) {
+			return found;
+		}
+	}
+}
 
 describe("palette.hexColorFromString()", function () {
 	// build test string: "baz"
@@ -32,5 +45,56 @@ describe("palette.hexColorFromWords()", function () {
 
 	it("should produce the same value if the words are sorted", function () {
 		assert.equal(colorA.toHexCode(), colorB.toHexCode());
+	});
+});
+
+describe("palette.triad()", function () {
+	it("should produce a triad of colors", function () {
+		var color = new HexColor(255, 0, 255),
+			triad = palette.triad(color),
+			result;
+
+		result = find(triad, function (c) {
+			return c.equalsRgb([255, 0, 255]);
+		});
+		assert.equal(true, result !== "undefined");
+
+		result = find(triad, function (c) {
+			return c.equalsRgb([255, 255, 0]);
+		});
+		assert.equal(true, result !== "undefined");
+
+		result = find(triad, function (c) {
+			return c.equalsRgb([0, 255, 255]);
+		});
+		assert.equal(true, result !== "undefined");
+	});
+});
+
+describe("palette.tetrad()", function () {
+	it("should produce a tetrad of colors (that's 4!)", function () {
+		var color = new HexColor(255, 0, 100),
+			tetrad = palette.tetrad(color),
+			result;
+
+		result = find(tetrad, function (c) {
+			return c.equalsRgb([255, 0, 100]);
+		});
+		assert.equal(true, result !== "undefined");
+
+		result = find(tetrad, function (c) {
+			return c.equalsRgb([100, 255, 100]);
+		});
+		assert.equal(true, result !== "undefined");
+
+		result = find(tetrad, function (c) {
+			return c.equalsRgb([100, 0, 255]);
+		});
+		assert.equal(true, result !== "undefined");
+
+		result = find(tetrad, function (c) {
+			return c.equalsRgb([255, 100, 0]);
+		});
+		assert.equal(true, result !== "undefined");
 	});
 });
