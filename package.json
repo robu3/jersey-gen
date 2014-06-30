@@ -1,7 +1,7 @@
 {
   "name": "jersey-gen",
   "decription": "Generates unique colors and patterns for strings ('jerseys')",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": "Robert Mitchell<robert.mitchell.iii+github@gmail.com>",
   "contributors": [
     "Thomas Ingham <tingham@mac.com>"
